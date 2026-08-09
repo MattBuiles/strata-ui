@@ -9,9 +9,12 @@
  * apuntan a ellos por retrocompatibilidad con las apps que ya bridgean a --iv-*.
  * El tema se resuelve por preferencia del SO y se fuerza con
  * data-theme="light" | "dark" en <html>.
+ *
+ * FUENTES: cargar Fraunces + Inter + Geist Mono en la app (next/font o un
+ * <link>/@import ANTES de @import "tailwindcss"). No se importan aquí para no
+ * generar el warning "@import must precede all rules" en los consumidores.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Inter:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap');
 
 :root {
   /* Superficies */
