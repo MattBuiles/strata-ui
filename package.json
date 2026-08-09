@@ -1,6 +1,6 @@
 {
   "name": "strata",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "strata — sistema de diseño de marca personal (violeta editorial): tokens claro/oscuro, tipografía Fraunces/Inter/Geist Mono, primitivos y dataviz. Repo: MattBuiles/strata-ui.",
   "private": true,
   "repository": { "type": "git", "url": "git+https://github.com/MattBuiles/strata-ui.git" },
