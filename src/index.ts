@@ -6,6 +6,7 @@ export { Badge, type Tone } from './components/badge'
 export { Stat } from './components/stat'
 export { Field, Input, Select } from './components/field'
 export { BottomNav, type BottomNavItem } from './components/bottom-nav'
+export { NavCard } from './components/nav-card'
 export { Tabs, type TabDef } from './components/tabs'
 export { Modal } from './components/modal'
 export {
