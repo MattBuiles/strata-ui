@@ -32,7 +32,7 @@ export function NavCard({
       'hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] motion-reduce:transition-none motion-reduce:hover:translate-y-0',
       'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--iv-bg)]',
       featured
-        ? 'bg-accent text-[color:var(--iv-bg)] shadow-[var(--shadow-lg)]'
+        ? 'bg-accent text-[color:var(--accent-fg)] shadow-[var(--shadow-lg)]'
         : 'bg-surface shadow-[var(--iv-shadow)] hover:shadow-[var(--shadow-lg)]',
       className
     ),
