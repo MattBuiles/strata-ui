@@ -31,7 +31,7 @@ pnpm add github:MattBuiles/invest-ui#main
    ```
 
 ## Componentes
-`BottomNav`, `Button`, `Card`, `SectionTitle`, `Badge`, `Stat`, `Field`/`Input`/`Select`, `Tabs`, `Skeleton`,
+`BottomNav`, `NavCard`, `Button`, `Card`, `SectionTitle`, `Badge`, `Stat`, `Field`/`Input`/`Select`, `Tabs`, `Skeleton`,
 `EmptyState`, `Table`/`TableWrap`/`Th`/`Td`, `ThemeToggle`.
 
 ## Dataviz (Canvas, theme-aware)
