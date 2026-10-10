@@ -5,6 +5,7 @@ export { Card, SectionTitle } from './components/card'
 export { Badge, type Tone } from './components/badge'
 export { Stat } from './components/stat'
 export { Field, Input, Select } from './components/field'
+export { BottomNav, type BottomNavItem } from './components/bottom-nav'
 export { Tabs, type TabDef } from './components/tabs'
 export { Modal } from './components/modal'
 export {
