@@ -28,7 +28,7 @@ export function NavCard({
   const props: LinkProps = {
     href,
     className: cn(
-      'group flex min-h-28 flex-col justify-between gap-6 rounded-2xl p-5 transition-[transform,box-shadow,background-color] duration-200',
+      'group flex min-h-28 flex-col justify-between gap-6 rounded-2xl p-5 transition-[transform,box-shadow] duration-200',
       'hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] motion-reduce:transition-none motion-reduce:hover:translate-y-0',
       'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--iv-bg)]',
       featured
