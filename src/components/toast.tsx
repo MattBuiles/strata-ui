@@ -37,7 +37,14 @@ const TONE_BAR: Record<ToastTone, string> = {
   info: 'bg-accent',
 }
 
-export function ToastProvider({ children }: { children: ReactNode }) {
+export function ToastProvider({
+  children,
+  bottomOffset = '1rem',
+}: {
+  children: ReactNode
+  /** CSS length kept clear below the toasts, e.g. the height of a bottom nav. */
+  bottomOffset?: string
+}) {
   const [items, setItems] = useState<ToastItem[]>([])
   const idRef = useRef(0)
 
@@ -58,7 +65,10 @@ export function ToastProvider({ children }: { children: ReactNode }) {
   return (
     <ToastContext.Provider value={toast}>
       {children}
-      <div className="pointer-events-none fixed bottom-4 right-4 z-[60] flex w-full max-w-sm flex-col gap-2">
+      <div
+        style={{ bottom: `calc(${bottomOffset} + env(safe-area-inset-bottom))` }}
+        className="pointer-events-none fixed inset-x-4 z-[60] ml-auto flex max-w-sm flex-col gap-2"
+      >
         {items.map((t) => (
           <div
             key={t.id}
