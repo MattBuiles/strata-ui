@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@import '../theme.css';
+@source '../src';
+@source './';
+
+body {
+  background: var(--iv-bg);
+  color: var(--iv-fg);
+}

@@ -3,10 +3,18 @@
   "version": "0.4.0",
   "description": "strata — sistema de diseño de marca personal (violeta editorial): tokens claro/oscuro, tipografía Fraunces/Inter/Geist Mono, primitivos y dataviz. Repo: MattBuiles/strata-ui.",
   "private": true,
-  "repository": { "type": "git", "url": "git+https://github.com/MattBuiles/strata-ui.git" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattBuiles/strata-ui.git"
+  },
   "type": "module",
-  "sideEffects": ["*.css"],
-  "files": ["src", "theme.css"],
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "src",
+    "theme.css"
+  ],
   "exports": {
     ".": "./src/index.ts",
     "./theme.css": "./theme.css"
@@ -18,5 +26,22 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "tailwind-merge": "^3.0.0"
-  }
+  },
+  "scripts": {
+    "demo:dev": "vite --config demo/vite.config.ts",
+    "demo:build": "vite build --config demo/vite.config.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  },
+  "packageManager": "pnpm@10.32.1"
 }
