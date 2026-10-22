@@ -1,9 +1,11 @@
-# invest-ui
+# strata
 
-Design system compartido de la suite (**Rastreo** = investment-dashboard, **Análisis** = market-agent):
-tokens de marca claro/oscuro, primitivos y dataviz. Un solo look, dos apps.
+Design system compartido (portfolio, orbit, market-agent, investment-dashboard, routine-schemer):
+tokens de marca claro/oscuro, primitivos y dataviz. Un solo look para todas las apps.
 
-- **Acento**: jade/teal (`#0f766e` claro · `#2dd4bf` oscuro).
+**Demo en vivo:** https://mattbuiles.github.io/strata-ui/ (`pnpm demo:dev` en local).
+
+- **Acento**: violeta editorial (`#4c1d95`).
 - **Semántico** (verde/rojo) reservado a P&L, separado del acento.
 - Cifras y tickers en **monoespaciada** (`.iv-tabular`).
 
