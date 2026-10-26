@@ -22,5 +22,19 @@ for (const [name, source] of [['light', lightCss], ['dark', darkCss]]) {
     }
   }
 }
+// Movimiento: duraciones y curvas contra --dur-* y --ease* (y el 0.98 de active:scale del botón).
+const motionTs = ts.match(/export const motion = \{([\s\S]*?)\} as const/)[1]
+const num = (k) => Number(motionTs.match(new RegExp(`${k}:\\s*(\\d+)`))[1])
+const curve = (k) => motionTs.match(new RegExp(`${k}:\\s*\\[([^\\]]+)\\]`))[1].split(',').map((x) => Number(x))
+const cssCurve = (v) => v.match(/cubic-bezier\(([^)]+)\)/)[1].split(',').map((x) => Number(x))
+const same = (a, b) => a.length === b.length && a.every((x, i) => x === b[i])
+const checks = [
+  ['motion.fast', num('fast'), parseInt(lightCss.durFast)],
+  ['motion.base', num('base'), parseInt(lightCss.dur)],
+  ['motion.slow', num('slow'), parseInt(lightCss.durSlow)],
+]
+for (const [name, a, b] of checks) if (a !== b) { console.error(`${name}: tokens.ts=${a} theme.css=${b}`); bad++ }
+if (!same(curve('ease'), cssCurve(lightCss.ease))) { console.error('motion.ease no coincide con --ease'); bad++ }
+if (!same(curve('easeOut'), cssCurve(lightCss.easeOut))) { console.error('motion.easeOut no coincide con --ease-out'); bad++ }
 if (bad) process.exit(1)
 console.log('tokens.ts coincide con theme.css')
