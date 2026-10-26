@@ -46,3 +46,14 @@ export const radius = { xs: 4, sm: 8, md: 12, lg: 16, xl: 24, full: 9999 } as co
 export const fontSize = { '2xs': 11, xs: 12, sm: 14, base: 17, lg: 20, xl: 24, '2xl': 30, '3xl': 40 } as const
 
 export const fontFamily = { serif: 'Fraunces', sans: 'Inter', mono: 'Geist Mono' } as const
+
+/** Movimiento: duraciones en ms y curvas de Bézier cúbica [x1, y1, x2, y2]. Espejo de --dur-* y --ease* de theme.css. */
+export const motion = {
+  fast: 150,
+  base: 240,
+  slow: 420,
+  ease: [0.2, 0.7, 0.2, 1],
+  easeOut: [0.16, 1, 0.3, 1],
+  /** Escala al pulsar un botón (active:scale-[0.98] del Button web). */
+  press: 0.98,
+} as const
